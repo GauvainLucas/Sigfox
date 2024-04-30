@@ -8,19 +8,19 @@ class SigfoxFrame:
                  ul_crc=None, ul_auth=None, ul_payload=None, id=None, mc=None, rep=None,
                  bf=None, li=None, ul_message_content=None):
 
-        self.ul_pr = ul_pr
-        self.ft = ft
-        self.ul_phy_content = ul_phy_content
-        self.ul_container = ul_container
-        self.ul_crc = ul_crc
-        self.ul_auth = ul_auth
-        self.ul_payload = ul_payload
-        self.id = id
-        self.mc = mc
-        self.rep = rep
-        self.bf = bf
-        self.li = li
-        self.ul_message_content = ul_message_content
+        self.ul_pr = ul_pr # 19 bits
+        self.ft = ft # 13 bits
+        self.ul_phy_content = ul_phy_content # 22 octets
+        self.ul_container = ul_container # 20 octets
+        self.ul_crc = ul_crc # 16 bits
+        self.ul_auth = ul_auth # 2 octets
+        self.ul_payload = ul_payload # 12 octets = message
+        self.id = id # 32 bits
+        self.mc = mc # 12 bits
+        self.rep = rep # 1 bit
+        self.bf = bf # 1 bit
+        self.li = li # 2 bits
+        self.ul_message_content = ul_message_content # 12 octets
 
 
 if __name__ == "__main__":
