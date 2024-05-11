@@ -68,7 +68,7 @@ if __name__ == "__main__":
     for i in range(norm * 11000, len(Trames[0])):
         # verifier tous les 20000 points si on passe par 0
         if i % (norm * 10000) == 0:
-            tabZeroQuatre.append(Trames[0][i-(norm * 3000):i+(norm * 3000)].count(0.0))
+            tabZeroQuatre.append(Trames[0][i-(norm * 2500):i+(norm * 2500)].count(0.0))
     print("Repérage des zones de zéros passé : ")
 
     # Traduction en bits
