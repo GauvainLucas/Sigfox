@@ -5,7 +5,7 @@ import numpy as np
 import math
 
 if __name__ == "__main__":
-    data, samplerate = sf.read("sigfox1.wav")
+    data, samplerate = sf.read("sigfox2.wav")
     print(f"Sample rate: {samplerate} Hz")
     print(f"Data shape: {data.shape}")
     print(f"Length data: {len(data)}")
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     print("Repérage des zones de zéros passé : ")
 
     # Traduction en bits
-    maxZeroMid = max(tabZeroQuatre)/2
+    maxZeroMid = max(tabZeroQuatre)/1.5
     print("maxZeroMid: ", maxZeroMid)
     for i in range(len(tabZeroQuatre)):
         if tabZeroQuatre[i] > maxZeroMid:
@@ -93,5 +93,4 @@ if __name__ == "__main__":
     message = bits[80: 176]
     print("Message        : ", hex(int(''.join(message), 2)))
     # sigfox1 : AABBCCDDEEFF112233445501
-    # sigfox2 : AABBCCDDEEFF11223344????
-    # sigfox3 : AABBCCDDEEFF112233446964
+    # sigfox2 : AABBCCDDEEFF112233446589
